@@ -29,6 +29,8 @@ if (!empty($username) || !empty($password) || !empty($gender) || !empty($email) 
       }
       $conn->close();
     }
+    
+    //connection code ends here
 
 } else {
  echo "All field are required";
