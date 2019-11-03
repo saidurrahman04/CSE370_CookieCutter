@@ -9,7 +9,7 @@ if (!empty($username)){
 		$host = "localhost";
 		$dbusername = "root";
 		$dbpassword = "";
-		$dbname = "testdb";
+		$dbname = "cse370sec3";
 
 		// Create connection
 		$conn = new mysqli ($host, $dbusername, $dbpassword, $dbname);
@@ -17,7 +17,7 @@ if (!empty($username)){
 			die("Connection failed: " . $conn->connect_error);
 		} 
 		else{
-			$sql = "INSERT INTO account (username, password) values ('$username','$password')";
+			$sql = "INSERT INTO register (username, password) values ('$username','$password')";
 			if ($conn->query($sql)){
 				echo "New record is inserted sucessfully";
 			}
