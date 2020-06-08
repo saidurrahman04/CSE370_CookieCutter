@@ -1,10 +1,7 @@
 <?php
-$username = $_POST['username'];
-$password = $_POST['password'];
-$gender = $_POST['gender'];
-$email = $_POST['email'];
-$phoneCode = $_POST['phoneCode'];
-$phone = $_POST['phone'];
+
+$firstname = $_POST['firstname'];
+$lastname = $_POST['lastname'];
 
 
 $host = "localhost";
@@ -21,13 +18,13 @@ if ($conn->connect_error) {
 } 
 echo "Connected successfully \n";
 
-$sql = "INSERT INTO userinfo (username, password, gender, email, phoneCode, phone) values ('$username', '$password', '$gender', '$email', '$phoneCode', '$phone') ";
-      
+$sql = "INSERT INTO register (firstname, lastname) values ('$firstname', '$lastname') ";
+
 if ($conn->query($sql)){
 	echo "New record is inserted sucessfully";
 	}
 	else{
 echo "Error: ". $sql ." ". $conn->error;
-     }
+      }
 $conn->close();
 ?>
